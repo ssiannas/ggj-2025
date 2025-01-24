@@ -8,10 +8,12 @@ public class Shooting : MonoBehaviour
     public GameObject prefab;
 
     // Optional: Set the position where prefabs will spawn
-    public Vector3 spawnPosition = Vector3.zero;
-    // Optional: Add an offset for each new prefab
-    public Vector3 spawnOffset = new Vector3(1, 0, 0);
-    private int spawnCount = 0;
+    public Vector2 spawnPosition = GameObject.transform.pos;
+
+    public Vector2 projDirection = Vector2.right; // Direction of bullets (e.g., forward)
+    public float projSpeed = 5f; // Speed of bullets
+
+
     void Start()
     {
         
@@ -33,13 +35,15 @@ public class Shooting : MonoBehaviour
         if (prefab != null)
         {
             // Calculate the new spawn position based on spawn count
-            Vector3 position = spawnPosition + (spawnOffset * spawnCount);
+            Vector2 position = spawnPosition;
 
             // Instantiate the prefab
-            Instantiate(prefab, position, Quaternion.identity);
+            GameObject projectile = Instantiate(prefab, position, Quaternion.identity);
 
-            // Increase the spawn count
-            spawnCount++;
+
+            // Add a script to make the prefab move
+            BulletMovement moveScript = projectile.AddComponent<BulletMovement>();
+            moveScript.SetMovement(projDirection, projSpeed);
         }
         else
         {
