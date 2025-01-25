@@ -19,8 +19,7 @@ namespace ggj_2025
 
         public void Move()
         {
-            // Get values from unity input systwm
-            var input = inputSystem.getAim(transform, _mainCamera);
+            var input = inputSystem.GetMovement();
             input *= speed * Time.deltaTime;
             transform.Translate(new Vector3(input.x, input.y, 0));
         }
