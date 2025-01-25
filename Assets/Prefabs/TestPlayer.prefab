@@ -150,4 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd31d3b407c21a40a009814267ba509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 4511424500534208984, guid: 0da18743ec3c5e7418e3be1debf13766, type: 3}
+  shootCooldown: 1
+  uiChannel: {fileID: 11400000, guid: 7864b12f6d19c3647816d13047432f07, type: 2}
   inputSystem: {fileID: 11400000, guid: 248d6f558b114d74696513ffecdee69b, type: 2}
