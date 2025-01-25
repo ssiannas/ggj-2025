@@ -92,6 +92,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiChannel: {fileID: 11400000, guid: 7864b12f6d19c3647816d13047432f07, type: 2}
+  _healthBarControllers:
+  - {fileID: 5355664672044138323}
+  - {fileID: 8718401711848204246}
 --- !u!1001 &9090124236565297777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,3 +216,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4974666299083166730, guid: d8f3aadc8378d1f47bb470ff39d36e31, type: 3}
   m_PrefabInstance: {fileID: 9090124236565297777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5355664672044138323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3780137950774822178, guid: d8f3aadc8378d1f47bb470ff39d36e31, type: 3}
+  m_PrefabInstance: {fileID: 9090124236565297777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497e4e29014a00f49a5952f4692dce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8718401711848204246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 494102928361659815, guid: d8f3aadc8378d1f47bb470ff39d36e31, type: 3}
+  m_PrefabInstance: {fileID: 9090124236565297777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497e4e29014a00f49a5952f4692dce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
