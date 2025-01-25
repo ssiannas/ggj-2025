@@ -13,9 +13,18 @@ namespace ggj_2025
         private float shield = 0f;
         private float bulletSpeed = 5f;
         public GameObject projectilePrefab;
-        public float shootCooldown = 1f;
-        private float cooldownTimestamp;
-
+        private float _firerate = 1f;
+        private float _cooldownTimestamp;
+        private float _fireCooldown;
+        [SerializeField] public float Firerate
+        {
+            get { return _firerate; }
+            private set
+            {
+                _firerate = value;
+                _fireCooldown = 1 / value;
+            }
+        }
         // Channels =================================================
         [SerializeField] private UIChannel uiChannel;
         
@@ -34,6 +43,7 @@ namespace ggj_2025
             {
                 throw new Exception("Input system not assigned");
             }
+            Firerate = _firerate;
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,7 +60,7 @@ namespace ggj_2025
             {
                 // Special
             }
-            TakeDamage(0.1f);
+            //TakeDamage(0.1f);
         }
 
         //Use Update for non-physics based functions
@@ -149,10 +159,12 @@ namespace ggj_2025
 
         private void TryShoot(Vector2 direction)
         {
-            if (Time.time < cooldownTimestamp) return;
-            cooldownTimestamp = Time.time + shootCooldown;
+            if (Time.time < _cooldownTimestamp) return;
+            _cooldownTimestamp = Time.time + _fireCooldown;
             // Shoot!
             Shoot(direction);
         }
+
+        
     }
 }
