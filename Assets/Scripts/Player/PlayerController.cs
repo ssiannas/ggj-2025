@@ -39,6 +39,7 @@ namespace ggj_2025
         private PlayerMovementController _movementController;
         private PlayerCrosshairController _crosshairController;
         private PlayerShootingController _shootingController;
+        private SpriteRenderer _spriteRenderer;
         [SerializeField] private InputSystem inputSystem;
         private float _powerCooldownTs;
 
@@ -57,6 +58,7 @@ namespace ggj_2025
             _movementController = GetComponent<PlayerMovementController>();
             _crosshairController = GetComponent<PlayerCrosshairController>();
             _shootingController = GetComponent<PlayerShootingController>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void FixedUpdate()
@@ -78,6 +80,8 @@ namespace ggj_2025
             {
                 TryUsePower();
             }
+            
+            _spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100) * -1;
         }
 
         private void CheckShield()
@@ -145,11 +149,5 @@ namespace ggj_2025
             _powerCooldownTs = Time.time + _powerCooldownSec;
             _shootingController.ShootMultiple(_directions); 
         }
-
-
-
-
-
-        
     }
 }

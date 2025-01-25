@@ -12,6 +12,11 @@ namespace ggj_2025
             _mainCamera = Camera.main;
         }
 
+        private void Update()
+        {
+            // have our z coordinate be equal to our y coordinate
+        }
+
         public void Move(InputSystem inputSystem)
         {
             var input = inputSystem.GetMovement();
