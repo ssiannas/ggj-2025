@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a4bd4f6c8ffc8704b902489c4a4fb8f6
+guid: 6efb792840f98e140a913de26bc77660
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1549849203916452268
-    second: Sponge H_0
+      213: 2576906908866056159
+    second: Reggie walk front_0
+  - first:
+      213: 2924431800154066648
+    second: Reggie walk front_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sponge H_0
+      name: Reggie walk front_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 119
-        width: 572
-        height: 352
+        x: 149
+        y: 49
+        width: 402
+        height: 582
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e43294c54dd7ae0800000000000000
-      internalID: -1549849203916452268
+      spriteID: fdf063a3e2303c320800000000000000
+      internalID: 2576906908866056159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reggie walk front_1
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 39
+        width: 402
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de0a0a5a3ba59820800000000000000
+      internalID: 2924431800154066648
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Sponge H_0: -1549849203916452268
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

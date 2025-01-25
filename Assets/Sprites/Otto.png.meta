@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4bd4f6c8ffc8704b902489c4a4fb8f6
+guid: d1da481bd01ad4e4c8f3a8460304ad53
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1549849203916452268
-    second: Sponge H_0
+      213: -2339629300401835384
+    second: Otto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sponge H_0
+      name: Otto_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 119
-        width: 572
-        height: 352
+        x: 119
+        y: 49
+        width: 322
+        height: 562
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e43294c54dd7ae0800000000000000
-      internalID: -1549849203916452268
+      spriteID: 882f3731c87f78fd0800000000000000
+      internalID: -2339629300401835384
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Sponge H_0: -1549849203916452268
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

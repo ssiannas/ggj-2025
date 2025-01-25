@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a4bd4f6c8ffc8704b902489c4a4fb8f6
+guid: 4c1c3755725d0bd4f9c93fd1e1055233
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1549849203916452268
-    second: Sponge H_0
+      213: -271390958305002123
+    second: Otto walk left_0
+  - first:
+      213: 9163685488262522207
+    second: Otto walk left_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sponge H_0
+      name: Otto walk left_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 119
-        width: 572
-        height: 352
+        x: 159
+        y: 39
+        width: 252
+        height: 582
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e43294c54dd7ae0800000000000000
-      internalID: -1549849203916452268
+      spriteID: 57d3afe7c53db3cf0800000000000000
+      internalID: -271390958305002123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Otto walk left_1
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 39
+        width: 252
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f552a497663fb2f70800000000000000
+      internalID: 9163685488262522207
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Sponge H_0: -1549849203916452268
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
