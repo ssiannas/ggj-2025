@@ -19,7 +19,7 @@ namespace ggj_2025
             }
 
             Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            return ((Vector2)sourceTransform.transform.position - mousePos).normalized;
+            return (mousePos - (Vector2)sourceTransform.transform.position).normalized;
         }
 
         public override bool GetFire()

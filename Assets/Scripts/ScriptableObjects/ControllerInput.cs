@@ -7,12 +7,18 @@ namespace ggj_2025
     [CreateAssetMenu(fileName = "ControllerInput", menuName = "Scriptable Objects/ControllerInput")]
     public class ControllerInput : InputSystem
     {
+        private Vector2 _lastAim = Vector2.right;
+        
         // For multiplayer, we might need to store device ID in the player information
         public override Vector2 GetAim(Transform sourceTransform, Camera mainCamera)
         {
-           var gamepad = Gamepad.current;
-           var input = new Vector2(gamepad.rightStick.x.ReadValue(), gamepad.rightStick.y.ReadValue());
-           return input.normalized;
+            var gamepad = Gamepad.current;
+            var input = new Vector2(gamepad.rightStick.x.ReadValue(), gamepad.rightStick.y.ReadValue());
+            if (input.magnitude > 0.1f)
+            {
+                _lastAim = input.normalized;
+            }
+            return _lastAim;
         }
 
         public override Vector2 GetMovement()

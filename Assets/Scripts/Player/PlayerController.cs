@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace ggj_2025
 {
-    [RequireComponent(typeof(PlayerMovementController))]
+    [RequireComponent(typeof(PlayerMovementController), typeof(PlayerCrosshairController))]
     public class PlayerController : MonoBehaviour
     {
         public float MaxHealth { get; private set; } = 100f;
@@ -18,17 +18,29 @@ namespace ggj_2025
         
         // Controllers
         private PlayerMovementController _movementController;
+        private PlayerCrosshairController _crosshairController;
+        [SerializeField] private InputSystem inputSystem;
+
+        private void Awake()
+        {
+            if (inputSystem is null)
+            {
+                throw new Exception("Input system not assigned");
+            }
+        }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             CurrentHealth = MaxHealth;
             _movementController = GetComponent<PlayerMovementController>();
+            _crosshairController = GetComponent<PlayerCrosshairController>();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            _movementController.Move();
+            _movementController.Move(inputSystem);
+            _crosshairController.UpdateCrosshair(inputSystem);
         }
 
         private void CheckShield()

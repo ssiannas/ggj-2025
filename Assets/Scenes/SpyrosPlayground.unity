@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 318526593}
   - component: {fileID: 318526592}
   - component: {fileID: 318526591}
+  - component: {fileID: 318526597}
+  - component: {fileID: 318526596}
   - component: {fileID: 318526595}
   m_Layer: 0
   m_Name: Cube
@@ -229,6 +231,33 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &318526595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318526590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd31d3b407c21a40a009814267ba509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputSystem: {fileID: 11400000, guid: 248d6f558b114d74696513ffecdee69b, type: 2}
+--- !u!114 &318526596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318526590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8608f127bbed9fe488e2f77041ec9fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshairDistance: 1
+  crosshair: {fileID: 4583486535672721525, guid: 1c52960c8a8ebfa4794d910828ac2f04, type: 3}
+--- !u!114 &318526597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
