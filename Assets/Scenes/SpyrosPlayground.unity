@@ -408,6 +408,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1571911107268205893, guid: 85d6e3a15b4d3864d81be67ab855fa7a, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 4511424500534208984, guid: 0da18743ec3c5e7418e3be1debf13766, type: 3}
     - target: {fileID: 3670044359220461759, guid: 85d6e3a15b4d3864d81be67ab855fa7a, type: 3}
       propertyPath: uiChannel
       value: 

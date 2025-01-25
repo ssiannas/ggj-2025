@@ -4,27 +4,28 @@ using UnityEngine.UIElements;
 
 namespace ggj_2025
 {
-    [RequireComponent(typeof(PlayerMovementController), typeof(PlayerCrosshairController))]
+    [RequireComponent(typeof(PlayerMovementController), typeof(PlayerCrosshairController), typeof(PlayerShootingController))]
     public class PlayerController : MonoBehaviour
     {
         // Properties ==============================================
         public float MaxHealth { get; private set; } = 100f;
         public float CurrentHealth { get; private set; }
-        private float shield = 0f;
-        private float bulletSpeed = 5f;
-        public GameObject projectilePrefab;
-        private float _firerate = 1f;
-        private float _cooldownTimestamp;
-        private float _fireCooldown;
-        [SerializeField] public float Firerate
+        private float _shield = 0;
+
+        private float _powerCooldownSec = 5f;
+        
+        private readonly Vector2[] _directions =
         {
-            get { return _firerate; }
-            private set
-            {
-                _firerate = value;
-                _fireCooldown = 1 / value;
-            }
-        }
+            Vector2.up,
+            Vector2.down,
+            Vector2.left,
+            Vector2.right,
+            new Vector2(1, 1).normalized,
+            new Vector2(-1, 1).normalized,
+            new Vector2(1, -1).normalized,
+            new Vector2(-1, -1).normalized,
+        };
+        
         // Channels =================================================
         [SerializeField] private UIChannel uiChannel;
         
@@ -35,7 +36,9 @@ namespace ggj_2025
         // Controllers ==============================================
         private PlayerMovementController _movementController;
         private PlayerCrosshairController _crosshairController;
+        private PlayerShootingController _shootingController;
         [SerializeField] private InputSystem inputSystem;
+        private float _powerCooldownTs;
 
         private void Awake()
         {
@@ -43,7 +46,6 @@ namespace ggj_2025
             {
                 throw new Exception("Input system not assigned");
             }
-            Firerate = _firerate;
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -52,43 +54,45 @@ namespace ggj_2025
             CurrentHealth = MaxHealth;
             _movementController = GetComponent<PlayerMovementController>();
             _crosshairController = GetComponent<PlayerCrosshairController>();
+            _shootingController = GetComponent<PlayerShootingController>();
         }
 
         private void FixedUpdate()
         {
-            if (inputSystem.GetSpecial())
-            {
-                // Special
-            }
+            _movementController.Move(inputSystem);
             //TakeDamage(0.1f);
         }
 
         //Use Update for non-physics based functions
         void Update()
         {
-            _movementController.Move(inputSystem);
             var aim = _crosshairController.UpdateCrosshair(inputSystem);
             if (inputSystem.GetFire())
             {
-                TryShoot(aim);
+                _shootingController.TryShoot(aim);
+            }
+            
+            if (inputSystem.GetSpecial())
+            {
+                TryUsePower();
             }
         }
 
         private void CheckShield()
         {
-           OnToggleShield?.Invoke(shield > 0);
+           OnToggleShield?.Invoke(_shield > 0);
         }
         
         
         public void TakeDamage(float damage)
         {
-            if (shield > 0)
+            if (_shield > 0)
             {
-                shield -= damage;
-                if (shield < 0)
+                _shield -= damage;
+                if (_shield < 0)
                 {
-                    CurrentHealth += shield;
-                    shield = 0;
+                    CurrentHealth += _shield;
+                    _shield = 0;
                     CheckShield();
                 }
             }
@@ -118,7 +122,7 @@ namespace ggj_2025
         
         public void AddShield(float shieldAmount)
         {
-            shield += shieldAmount;
+            _shield += shieldAmount;
             CheckShield();
         }
         
@@ -133,37 +137,16 @@ namespace ggj_2025
             uiChannel.HealthChanged(CurrentHealth, MaxHealth);
         }
 
-
-        private void Shoot(Vector2 direction)
+        private void TryUsePower()
         {
-            if (projectilePrefab != null)
-            {
-                // Calculate the new spawn position
-                Vector2 position = transform.transform.position;
-
-                // Instantiate the prefab
-                GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-
-
-                // Add a script to make the prefab move
-                BulletMovement moveScript = projectile.AddComponent<BulletMovement>();
-                moveScript.SetMovement(direction, bulletSpeed);
-            }
-            else
-            {
-                Debug.LogWarning("Prefab is not assigned in the Inspector!");
-            }
+            if (Time.time < _powerCooldownTs) return;
+            _powerCooldownTs = Time.time + _powerCooldownSec;
+            _shootingController.ShootMultiple(_directions); 
         }
 
 
 
-        private void TryShoot(Vector2 direction)
-        {
-            if (Time.time < _cooldownTimestamp) return;
-            _cooldownTimestamp = Time.time + _fireCooldown;
-            // Shoot!
-            Shoot(direction);
-        }
+
 
         
     }
