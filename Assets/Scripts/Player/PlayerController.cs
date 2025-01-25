@@ -11,7 +11,11 @@ namespace ggj_2025
         public float MaxHealth { get; private set; } = 100f;
         public float CurrentHealth { get; private set; }
         private float shield = 0f;
-        
+        private float bulletSpeed = 5f;
+        public GameObject projectilePrefab;
+        public float shootCooldown = 1f;
+        private float cooldownTimestamp;
+
         // Channels =================================================
         [SerializeField] private UIChannel uiChannel;
         
@@ -42,17 +46,22 @@ namespace ggj_2025
 
         private void FixedUpdate()
         {
-            _movementController.Move(inputSystem);
-            var aim = _crosshairController.UpdateCrosshair(inputSystem);
-            if (inputSystem.GetFire())
-            {
-                // Shoot(aim)
-            }
             if (inputSystem.GetSpecial())
             {
                 // Special
             }
             TakeDamage(0.1f);
+        }
+
+        //Use Update for non-physics based functions
+        void Update()
+        {
+            _movementController.Move(inputSystem);
+            var aim = _crosshairController.UpdateCrosshair(inputSystem);
+            if (inputSystem.GetFire())
+            {
+                TryShoot(aim);
+            }
         }
 
         private void CheckShield()
@@ -112,6 +121,38 @@ namespace ggj_2025
         private void OnHealthChanged()
         {
             uiChannel.HealthChanged(CurrentHealth, MaxHealth);
+        }
+
+
+        private void Shoot(Vector2 direction)
+        {
+            if (projectilePrefab != null)
+            {
+                // Calculate the new spawn position
+                Vector2 position = transform.transform.position;
+
+                // Instantiate the prefab
+                GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+
+
+                // Add a script to make the prefab move
+                BulletMovement moveScript = projectile.AddComponent<BulletMovement>();
+                moveScript.SetMovement(direction, bulletSpeed);
+            }
+            else
+            {
+                Debug.LogWarning("Prefab is not assigned in the Inspector!");
+            }
+        }
+
+
+
+        private void TryShoot(Vector2 direction)
+        {
+            if (Time.time < cooldownTimestamp) return;
+            cooldownTimestamp = Time.time + shootCooldown;
+            // Shoot!
+            Shoot(direction);
         }
     }
 }

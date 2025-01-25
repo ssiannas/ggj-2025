@@ -24,7 +24,7 @@ namespace ggj_2025
 
         public override bool GetFire()
         {
-            return Input.GetKeyDown(KeyCode.Space);
+            return Input.GetKey(KeyCode.Space);
         }
 
         public override bool GetSpecial()

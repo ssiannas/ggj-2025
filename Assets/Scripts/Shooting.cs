@@ -35,7 +35,7 @@ public class Shooting : MonoBehaviour
         if (prefab != null)
         {
             // Calculate the new spawn position based on spawn count
-            Vector2 position = spawnPosition;
+            Vector2 position = transform.position;
 
             // Instantiate the prefab
             GameObject projectile = Instantiate(prefab, position, Quaternion.identity);
