@@ -1,25 +1,37 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "KeyboardInput", menuName = "Scriptable Objects/KeyboardInput")]
-public class KeyboardInput : InputSystem
+namespace ggj_2025
 {
-    // Returns the normalized unit vector for movement
-    public override Vector2 getMovement()
+    [CreateAssetMenu(fileName = "KeyboardInput", menuName = "Scriptable Objects/KeyboardInput")]
+    public class KeyboardInput : InputSystem
     {
-        var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        return input.normalized;
-    }
-
-    public override Vector2 getAim(GameObject sourceTransform)
-    {
-        // Return normalized vector towards mouse cursor
-        var camera = Camera.main;
-        if (camera == null)
+        // Returns the normalized unit vector for movement
+        public override Vector2 getMovement()
         {
-            Debug.LogError("No camera found in scene");
-            return Vector2.zero;
+            var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            return input.normalized;
         }
-        Vector2 mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
-        return ((Vector2)sourceTransform.transform.position - mousePos).normalized;
+
+        public override Vector2 getAim(Transform sourceTransform, Camera mainCamera)
+        {
+            // Return normalized vector towards mouse cursor
+            if (mainCamera is null)
+            {
+                return Vector2.zero;
+            }
+
+            Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            return ((Vector2)sourceTransform.transform.position - mousePos).normalized;
+        }
+
+        public override bool getFire()
+        {
+            return Input.GetKeyDown(KeyCode.Space);
+        }
+
+        public override bool getSpecial()
+        {
+            return Input.GetKeyDown(KeyCode.E);
+        }
     }
 }

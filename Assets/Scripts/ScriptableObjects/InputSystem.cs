@@ -1,8 +1,15 @@
 using UnityEngine;
 
-public abstract class InputSystem : ScriptableObject
+namespace ggj_2025
 {
-   public abstract Vector2 getMovement();
+   public abstract class InputSystem : ScriptableObject
+   {
+      public abstract Vector2 getMovement();
 
-   public abstract Vector2 getAim(GameObject sourceTransform);
+      public abstract Vector2 getAim(Transform sourceTransform, Camera mainCamera);
+
+      public abstract bool getFire();
+
+      public abstract bool getSpecial();
+   }
 }
