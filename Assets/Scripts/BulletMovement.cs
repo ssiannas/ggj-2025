@@ -12,6 +12,8 @@ namespace ggj_2025
         
         private SpriteRenderer _spriteRenderer;
         private Rigidbody2D _rigidbody2D;
+        
+        [SerializeField] private CameraChannel cameraChannel;
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,6 +50,7 @@ namespace ggj_2025
                 if (collision.gameObject.CompareTag("P1") || collision.gameObject.CompareTag("P2"))
                 {
                     PlayerController target = collision.gameObject.GetComponent<PlayerController>();
+                    cameraChannel.CameraShake(0.15f, 0.05f);
                     target.TakeDamage(damage);
                 }
             }
