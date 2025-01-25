@@ -52,6 +52,7 @@ namespace ggj_2025
             {
                 // Special
             }
+            TakeDamage(0.1f);
         }
 
         private void CheckShield()
