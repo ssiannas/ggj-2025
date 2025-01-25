@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Submarine rotten_0: 2493767531115585536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

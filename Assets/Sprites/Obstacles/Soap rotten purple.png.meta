@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ccce1443be857234fa4d9c8696d63d32
+guid: 7835c5df73d94d74f845a8c9d933f9ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6147913126489438637
-    second: Soap rotten_0
+      213: 9208643708984722960
+    second: Soap rotten purple_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soap rotten_0
+      name: Soap rotten purple_0
       rect:
         serializedVersion: 2
         x: 39
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da93d5e5a66c15550800000000000000
-      internalID: 6147913126489438637
+      spriteID: 0168b21f9acabcf70800000000000000
+      internalID: 9208643708984722960
       vertices: []
       indices: 
       edges: []

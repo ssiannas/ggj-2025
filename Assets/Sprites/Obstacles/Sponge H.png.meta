@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7bcfe351964f2cd43bc99055f17abd98
+guid: a4bd4f6c8ffc8704b902489c4a4fb8f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3610960959206725224
-    second: Rubber duck melted _0
+      213: -1549849203916452268
+    second: Sponge H_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rubber duck melted _0
+      name: Sponge H_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 99
-        width: 532
-        height: 342
+        x: 19
+        y: 119
+        width: 572
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86612575cd5bc1230800000000000000
-      internalID: 3610960959206725224
+      spriteID: 45e43294c54dd7ae0800000000000000
+      internalID: -1549849203916452268
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Rubber duck melted _0: 3610960959206725224
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

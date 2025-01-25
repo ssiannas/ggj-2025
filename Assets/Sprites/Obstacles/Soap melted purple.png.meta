@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 92af4e1c657881c44be8a78f93a78aa7
+guid: 18cf6702a99672146a98f08eeb312a3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4076064873644137933
-    second: Soap(1)_0
+      213: -7106495037328637197
+    second: Soap melted purple_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soap(1)_0
+      name: Soap melted purple_0
       rect:
         serializedVersion: 2
-        x: 39
+        x: 9
         y: 89
-        width: 582
+        width: 622
         height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3326ef4e798ee67c0800000000000000
-      internalID: -4076064873644137933
+      spriteID: 3f243f55a68a06d90800000000000000
+      internalID: -7106495037328637197
       vertices: []
       indices: 
       edges: []

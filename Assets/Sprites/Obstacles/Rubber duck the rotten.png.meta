@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rubber duck the rotten_0: -6133030704276332409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
