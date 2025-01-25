@@ -26,5 +26,16 @@ namespace ggj_2025
        * Returns true if the special button is pressed.
        */
       public abstract bool GetSpecial();
+
+      /**
+       * Starts the rumble effect.
+       */
+      public abstract void StartRumble(float durationSec = 0.5f);
+      
+      
+      /**
+       * Stops the rumble effect.
+       */
+      public abstract void StopRumble();
    }
 }

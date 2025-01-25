@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -106,6 +107,9 @@ namespace ggj_2025
             {
                 CurrentHealth -= damage;
             }
+            
+            inputSystem.StartRumble();
+            StartCoroutine(StopRumbleAfter(0.2f));
 
             OnHealthChanged();
             if (CurrentHealth <= 0)
@@ -113,6 +117,11 @@ namespace ggj_2025
                 //Die();
                 Destroy(gameObject);
             }
+        }
+        private IEnumerator StopRumbleAfter(float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            inputSystem.StopRumble();
         }
         
         public void Heal(float healAmount)

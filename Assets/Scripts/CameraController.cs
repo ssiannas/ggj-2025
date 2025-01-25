@@ -61,6 +61,8 @@ namespace ggj_2025
             }
         }
 
+        
+
         private void Shake()
         {
             if (_elapsedShakeDuration < _shakeDuration)

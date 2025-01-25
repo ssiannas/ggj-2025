@@ -31,5 +31,15 @@ namespace ggj_2025
         {
             return Input.GetKeyDown(KeyCode.E);
         }
+        
+        public override void StartRumble(float durationSec = 0.5f)
+        {
+            // No rumble for keyboard
+        }
+        
+        public override void StopRumble()
+        {
+            // No rumble for keyboard
+        }
     }
 }
