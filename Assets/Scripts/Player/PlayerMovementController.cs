@@ -9,7 +9,6 @@ namespace ggj_2025
         private Camera _mainCamera;
         public void Awake()
         {
-
             _mainCamera = Camera.main;
         }
 

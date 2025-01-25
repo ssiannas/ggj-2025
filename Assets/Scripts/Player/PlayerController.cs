@@ -12,13 +12,12 @@ namespace ggj_2025
         public float CurrentHealth { get; private set; }
         private float shield = 0f;
         
+        // Channels =================================================
+        [SerializeField] private UIChannel uiChannel;
+        
         // Events and Delegates =====================================
         public delegate void ToggleShield(bool shieldOn);
         public event ToggleShield OnToggleShield;
-        
-        public delegate void  HealthChanged(float health, float maxHealth);
-        public event HealthChanged OnHealthChanged;
-        
         
         // Controllers ==============================================
         private PlayerMovementController _movementController;
@@ -77,7 +76,8 @@ namespace ggj_2025
             {
                 CurrentHealth -= damage;
             }
-            
+
+            OnHealthChanged();
             if (CurrentHealth <= 0)
             {
                 //Die();
@@ -92,7 +92,8 @@ namespace ggj_2025
             {
                 CurrentHealth = MaxHealth;
             }
-            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+
+            OnHealthChanged();
         }
         
         public void AddShield(float shieldAmount)
@@ -104,7 +105,12 @@ namespace ggj_2025
         public void AddMaxHealth(float healthAmount)
         {
             MaxHealth += healthAmount;
-            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+            OnHealthChanged();
+        }
+        
+        private void OnHealthChanged()
+        {
+            uiChannel.HealthChanged(CurrentHealth, MaxHealth);
         }
     }
 }

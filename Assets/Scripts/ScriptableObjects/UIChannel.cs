@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,7 +13,7 @@ namespace ggj_2025
         {
             if (OnHealthChanged == null)
             {
-                Debug.Log("No UI Manager Assigned");
+               throw new Exception("No UI Manager Assigned");
             }
             OnHealthChanged?.Invoke(currentHealth, maxHealth);
         }
