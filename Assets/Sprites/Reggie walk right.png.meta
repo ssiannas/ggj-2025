@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Reggie walk right_0: -2223685874664141851
+      Reggie walk right_1: -6124122326459239916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

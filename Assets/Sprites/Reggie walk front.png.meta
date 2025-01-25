@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Reggie walk front_0: 2576906908866056159
+      Reggie walk front_1: 2924431800154066648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

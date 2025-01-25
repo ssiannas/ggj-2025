@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Otto walk back_0: 5594650655081765856
+      Otto walk back_1: 9175648940390252033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
