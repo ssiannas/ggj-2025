@@ -1,24 +1,34 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ggj_2025
 {
+    [RequireComponent(typeof(PlayerMovementController))]
     public class PlayerController : MonoBehaviour
     {
         public float MaxHealth { get; private set; } = 100f;
 
         public float CurrentHealth { get; private set; }
         
-        // Create callback for toggling shield state (input bool)
         public delegate void ToggleShield(bool shieldOn);
         public event ToggleShield OnToggleShield;
 
         private float shield = 0f;
+        
+        // Controllers
+        private PlayerMovementController _movementController;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             CurrentHealth = MaxHealth;
+            _movementController = GetComponent<PlayerMovementController>();
+        }
+
+        private void Update()
+        {
+            _movementController.Move();
         }
 
         private void CheckShield()
