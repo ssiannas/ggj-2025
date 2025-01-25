@@ -7,7 +7,7 @@ namespace ggj_2025
     {
         private float bulletSpeed = 5f;
         [SerializeField] private GameObject projectilePrefab;
-        private float _firerate = 1f;
+        private float _firerate = 1.5f;
         private float _cooldownTimestamp;
         private float _fireCooldown;
         private float _offset= 1.2f;

@@ -19,8 +19,9 @@ namespace ggj_2025
             if (_camera is null)
             {
                 throw new System.Exception("Main camera not found");
+
             }
-           _maxDistance = GetDistance();
+            _maxDistance = GetDistance();
            _originalZoom = _camera.orthographicSize;
            _camera.orthographic = false;
         }

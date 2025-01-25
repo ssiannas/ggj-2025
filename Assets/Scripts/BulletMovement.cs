@@ -9,12 +9,21 @@ namespace ggj_2025
         public float damage = 5f;
         public float size = 10f;
         public int PlayerIndex = 0;
-
+        
+        private SpriteRenderer _spriteRenderer;
+        private Rigidbody2D _rigidbody2D;
+        private void Awake()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+        }
+        
         // Set the movement direction and speed
         public void SetMovement(Vector2 moveDirection, float moveSpeed)
         {
             direction = moveDirection.normalized; // Normalize direction to ensure consistent movement
             speed = moveSpeed;
+            _rigidbody2D.AddForce(direction * speed);
         }
 
         private void Start()
@@ -25,7 +34,8 @@ namespace ggj_2025
         void Update()
         {
             // Move the object in the specified direction
-            transform.Translate(direction * speed * Time.deltaTime);
+            var factor = Time.deltaTime * speed;
+            _spriteRenderer.sortingOrder =  Mathf.RoundToInt(transform.position.y * 100) * -1;
             //TO DO: RIGID BOODY  
         }
 
