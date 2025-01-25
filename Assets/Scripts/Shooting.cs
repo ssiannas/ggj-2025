@@ -8,7 +8,7 @@ public class Shooting : MonoBehaviour
     public GameObject prefab;
 
     // Optional: Set the position where prefabs will spawn
-    public Vector2 spawnPosition = GameObject.transform.pos;
+    public Vector2 spawnPosition = Vector2.zero;
 
     public Vector2 projDirection = Vector2.right; // Direction of bullets (e.g., forward)
     public float projSpeed = 5f; // Speed of bullets
