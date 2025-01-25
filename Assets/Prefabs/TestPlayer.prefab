@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5717678015227714037}
   - component: {fileID: 1077624627839916396}
   - component: {fileID: 3670044359220461759}
+  - component: {fileID: 1571911107268205893}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -150,7 +151,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd31d3b407c21a40a009814267ba509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 4511424500534208984, guid: 0da18743ec3c5e7418e3be1debf13766, type: 3}
-  shootCooldown: 1
+  PlayerIndex: 0
+  SelfDamageBigEmoEnobyVampireHarryIhearthMCR: 0.1
   uiChannel: {fileID: 11400000, guid: 7864b12f6d19c3647816d13047432f07, type: 2}
   inputSystem: {fileID: 11400000, guid: 248d6f558b114d74696513ffecdee69b, type: 2}
+--- !u!114 &1571911107268205893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212762986898305068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c9a0a2dfc52b541b0ed46ecdac167a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}

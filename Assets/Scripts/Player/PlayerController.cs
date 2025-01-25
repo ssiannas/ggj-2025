@@ -62,7 +62,7 @@ namespace ggj_2025
         private void FixedUpdate()
         {
             _movementController.Move(inputSystem);
-            TakeDamage(SelfDamageBigEmoEnobyVampireHarryIhearthMCR);
+            //TakeDamage(SelfDamageBigEmoEnobyVampireHarryIhearthMCR);
         }
 
         //Use Update for non-physics based functions

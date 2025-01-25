@@ -10,6 +10,7 @@ namespace ggj_2025
         private float _firerate = 1f;
         private float _cooldownTimestamp;
         private float _fireCooldown;
+        private float _offset= 1.2f;
         public float Firerate
         {
             get => _firerate; 
@@ -47,11 +48,9 @@ namespace ggj_2025
 
         private void Shoot(Vector2 direction)
         {
-            // Calculate the new spawn position
-            Vector2 position = transform.transform.position;
 
             // Instantiate the prefab
-            var projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            var projectile = Instantiate(projectilePrefab, transform.position + (Vector3)(direction.normalized*_offset), Quaternion.identity);
 
             // Add a script to make the prefab move
             var moveScript = projectile.GetComponent<BulletMovement>();
