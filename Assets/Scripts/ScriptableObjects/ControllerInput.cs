@@ -8,11 +8,12 @@ namespace ggj_2025
     public class ControllerInput : InputSystem
     {
         private Vector2 _lastAim = Vector2.right;
-        
+        public int PlayerIndex=0;
+
         // For multiplayer, we might need to store device ID in the player information
         public override Vector2 GetAim(Transform sourceTransform, Camera mainCamera)
         {
-            var gamepad = Gamepad.current;
+            var gamepad = Gamepad.all[PlayerIndex];
             var input = new Vector2(gamepad.rightStick.x.ReadValue(), gamepad.rightStick.y.ReadValue());
             if (input.magnitude > 0.1f)
             {
@@ -23,20 +24,21 @@ namespace ggj_2025
 
         public override Vector2 GetMovement()
         {
-           var gamepad = Gamepad.current;
-           var input = new Vector2(gamepad.leftStick.x.ReadValue(), gamepad.leftStick.y.ReadValue());
-           return input.normalized;
+            var gamepad = Gamepad.all[PlayerIndex];
+            var input = new Vector2(gamepad.leftStick.x.ReadValue(), gamepad.leftStick.y.ReadValue());
+            return input.normalized;
         }
 
         public override bool GetSpecial()
         {
-            return Gamepad.current[GamepadButton.North].isPressed;
+            return Gamepad.all[PlayerIndex][GamepadButton.LeftTrigger].isPressed;
         }
 
         public override bool GetFire()
         {
             // Use right button (circle or B) to fire
-            return Gamepad.current[GamepadButton.East].isPressed;
+            return Gamepad.all[PlayerIndex][GamepadButton.RightTrigger].isPressed;
         }
     }
+
 }
