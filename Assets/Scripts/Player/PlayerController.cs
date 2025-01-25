@@ -7,16 +7,20 @@ namespace ggj_2025
     [RequireComponent(typeof(PlayerMovementController), typeof(PlayerCrosshairController))]
     public class PlayerController : MonoBehaviour
     {
+        // Properties ==============================================
         public float MaxHealth { get; private set; } = 100f;
-
         public float CurrentHealth { get; private set; }
-        
-        public delegate void ToggleShield(bool shieldOn);
-        public event ToggleShield OnToggleShield;
-
         private float shield = 0f;
         
-        // Controllers
+        // Events and Delegates =====================================
+        public delegate void ToggleShield(bool shieldOn);
+        public event ToggleShield OnToggleShield;
+        
+        public delegate void  HealthChanged(float health, float maxHealth);
+        public event HealthChanged OnHealthChanged;
+        
+        
+        // Controllers ==============================================
         private PlayerMovementController _movementController;
         private PlayerCrosshairController _crosshairController;
         [SerializeField] private InputSystem inputSystem;
@@ -88,6 +92,7 @@ namespace ggj_2025
             {
                 CurrentHealth = MaxHealth;
             }
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
         
         public void AddShield(float shieldAmount)
@@ -99,6 +104,7 @@ namespace ggj_2025
         public void AddMaxHealth(float healthAmount)
         {
             MaxHealth += healthAmount;
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
     }
 }
