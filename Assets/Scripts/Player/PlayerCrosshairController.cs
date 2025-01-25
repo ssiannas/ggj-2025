@@ -21,10 +21,17 @@ namespace ggj_2025
             crosshair = Instantiate(crosshair, transform.position + new Vector3(0, crosshairDistance, 0), Quaternion.identity);
         }
         
-        public void UpdateCrosshair(InputSystem inputSystem)
+        /**
+         * Updates the crosshair position based on the aim input.
+         *
+         * @param inputSystem The input system to get the aim input from.
+         * @return The aim input.
+         */
+        public Vector2 UpdateCrosshair(InputSystem inputSystem)
         {
             var aim = inputSystem.GetAim(transform, _mainCamera);
             crosshair.transform.position = transform.position + new Vector3(aim.x, aim.y, 0) * crosshairDistance;
+            return aim;
         }
     }
 }

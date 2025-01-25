@@ -40,7 +40,15 @@ namespace ggj_2025
         private void FixedUpdate()
         {
             _movementController.Move(inputSystem);
-            _crosshairController.UpdateCrosshair(inputSystem);
+            var aim = _crosshairController.UpdateCrosshair(inputSystem);
+            if (inputSystem.GetFire())
+            {
+                // Shoot(aim)
+            }
+            if (inputSystem.GetSpecial())
+            {
+                // Special
+            }
         }
 
         private void CheckShield()
