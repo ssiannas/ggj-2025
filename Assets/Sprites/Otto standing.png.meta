@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a4bd4f6c8ffc8704b902489c4a4fb8f6
+guid: 699cefaf699caaf46af7377e9ade99e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1549849203916452268
-    second: Sponge H_0
+      213: 5828942955555242294
+    second: Otto standing_0
+  - first:
+      213: 6939676519529472760
+    second: Otto standing_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sponge H_0
+      name: Otto standing_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 119
-        width: 572
-        height: 352
+        x: 119
+        y: 49
+        width: 322
+        height: 562
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e43294c54dd7ae0800000000000000
-      internalID: -1549849203916452268
+      spriteID: 631c2e92cb094e050800000000000000
+      internalID: 5828942955555242294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Otto standing_1
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 49
+        width: 322
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f26caac60fae4060800000000000000
+      internalID: 6939676519529472760
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Sponge H_0: -1549849203916452268
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Soap melted purple_0: -7106495037328637197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
