@@ -11,6 +11,8 @@ namespace ggj_2025
         public float MaxHealth { get; private set; } = 100f;
         public float CurrentHealth { get; private set; }
         private float _shield = 0;
+        public int PlayerIndex = 0;
+        public float SelfDamageBigEmoEnobyVampireHarryIhearthMCR = 0.1f;
 
         private float _powerCooldownSec = 5f;
         
@@ -60,7 +62,7 @@ namespace ggj_2025
         private void FixedUpdate()
         {
             _movementController.Move(inputSystem);
-            //TakeDamage(0.1f);
+            TakeDamage(SelfDamageBigEmoEnobyVampireHarryIhearthMCR);
         }
 
         //Use Update for non-physics based functions
@@ -134,7 +136,7 @@ namespace ggj_2025
         
         private void OnHealthChanged()
         {
-            uiChannel.HealthChanged(CurrentHealth, MaxHealth);
+            uiChannel.HealthChanged(CurrentHealth, MaxHealth, PlayerIndex);
         }
 
         private void TryUsePower()
