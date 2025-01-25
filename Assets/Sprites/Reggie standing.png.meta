@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Reggie standing_0: 5360118962744906541
+      Reggie standing_1: 3842916486655043126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

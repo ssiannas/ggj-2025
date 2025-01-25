@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Otto standing_0: 5828942955555242294
+      Otto standing_1: 6939676519529472760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

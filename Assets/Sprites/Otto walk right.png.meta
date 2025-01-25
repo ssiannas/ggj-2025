@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Otto walk right_0: -1296780140787907589
+      Otto walk right_1: 2852728066076016759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
