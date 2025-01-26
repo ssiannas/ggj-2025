@@ -48,6 +48,7 @@ namespace ggj_2025
 
         // Channels =================================================
         [SerializeField] private UIChannel uiChannel;
+        [SerializeField] private AudioChannel audioChannel;
         
         // Events and Delegates =====================================
         public delegate void ToggleShield(bool shieldOn);
@@ -136,6 +137,7 @@ namespace ggj_2025
             if (CurrentHealth <= 0)
             {
                 //Die();
+                audioChannel.PlayAudio("win_sfx");
                 Destroy(gameObject);
             }
         }
@@ -198,6 +200,7 @@ namespace ggj_2025
                     break;
                 case PlayerState.IDLE:
                     _animationController.StopIdle();
+                    audioChannel.PlayAudio("walk_sfx");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(state), state, null);
@@ -221,6 +224,8 @@ namespace ggj_2025
                         _animationController.StartWalkRight();
                    break;
                case PlayerState.IDLE:
+                    _animationController.StartIdle();
+                    audioChannel.StopAudio("walk_sfx");
                    break;
                default:
                    throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -230,7 +235,6 @@ namespace ggj_2025
         {
             var startVec = new Vector2(-1,1).normalized;
             var angle = -Vector2.SignedAngle(startVec, aim);
-            Debug.Log(angle);
             if (!inputSystem.GetFire() && inputSystem.GetMovement() == Vector2.zero)
             {
                 return PlayerState.IDLE;

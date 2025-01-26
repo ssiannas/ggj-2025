@@ -131,6 +131,7 @@ MonoBehaviour:
   size: 10
   PlayerIndex: 0
   cameraChannel: {fileID: 11400000, guid: 996aac9131a722647b3be5f65a9ca3e5, type: 2}
+  audioChannel: {fileID: 11400000, guid: 5a70ce727aa527a4c8183940ef1165b5, type: 2}
 --- !u!58 &6932813996834993353
 CircleCollider2D:
   m_ObjectHideFlags: 0

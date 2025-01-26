@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1623836125523296373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8721417157607743912}
+  - component: {fileID: 4598597442458365797}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8721417157607743912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623836125523296373}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5542283, y: -2.4913168, z: -0.11515582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4598597442458365797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623836125523296373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e6a86262554dd4894a7f07a5af763b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1c3fcc97adef1494e997748ee3ea478a, type: 3}
+    soundName: main_theme
+    volume: 0.8
+    pitch: 1
+    loop: 1
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1c3fcc97adef1494e997748ee3ea478a, type: 3}
+    soundName: main_menu_theme
+    volume: 0.7
+    pitch: 0.6
+    loop: 1
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: b0a8102c2c57c154aa4e672e0017816c, type: 3}
+    soundName: bubble_pop
+    volume: 0.65
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: f903ca85800c53647a8c253b6ccfffdf, type: 3}
+    soundName: special
+    volume: 0.7
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 775727d0093fd704390a8a257db8ecab, type: 3}
+    soundName: shoot_high_pitch
+    volume: 0.7
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1564e047990744249945a0b910f7a7ec, type: 3}
+    soundName: shoot_low_pitch
+    volume: 0.933
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 376dbc4322630f04aaa84081d7134bf5, type: 3}
+    soundName: shoot_medium_pitch
+    volume: 0.7
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: c4e93d93e8adbfb458e896d2b4fe6377, type: 3}
+    soundName: walk_sfx
+    volume: 0.738
+    pitch: 1
+    loop: 1
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 99ad1ab49201ef34690a2499352d5fa9, type: 3}
+    soundName: win_sfx
+    volume: 0.9
+    pitch: 1
+    loop: 0
+  channel: {fileID: 11400000, guid: 5a70ce727aa527a4c8183940ef1165b5, type: 2}

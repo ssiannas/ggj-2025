@@ -14,6 +14,7 @@ namespace ggj_2025
         private Rigidbody2D _rigidbody2D;
         
         [SerializeField] private CameraChannel cameraChannel;
+        [SerializeField] private AudioChannel audioChannel;
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -46,6 +47,7 @@ namespace ggj_2025
         {
             if (!collision.gameObject.CompareTag("Bubble"))
             {
+                audioChannel.PlayAudio("bubble_pop");
                 Destroy(gameObject);
                 if (collision.gameObject.CompareTag("P1") || collision.gameObject.CompareTag("P2"))
                 {

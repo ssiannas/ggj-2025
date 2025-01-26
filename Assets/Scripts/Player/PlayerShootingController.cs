@@ -11,6 +11,14 @@ namespace ggj_2025
         private float _cooldownTimestamp;
         private float _fireCooldown;
         private float _offset= 1.2f;
+        [SerializeField] private AudioChannel audioChannel;
+
+        private string[] shootingSounds =
+        {
+            "shoot_high_pitch",
+            "shoot_low_pitch",
+            "shoot_medium_pitch"
+        };
         public float Firerate
         {
             get => _firerate; 
@@ -35,11 +43,15 @@ namespace ggj_2025
             if (Time.time < _cooldownTimestamp) return;
             _cooldownTimestamp = Time.time + _fireCooldown;
             // Shoot!
+            // Get random shooting sound 
+            var soundName = shootingSounds[UnityEngine.Random.Range(0, shootingSounds.Length)];
+            audioChannel.PlayAudio(soundName);
             Shoot(direction);
         }
 
         public void ShootMultiple(Vector2[] directions)
         {
+            audioChannel.PlayAudio("special");
             foreach (var direction in directions)
             {
                 Shoot(direction);

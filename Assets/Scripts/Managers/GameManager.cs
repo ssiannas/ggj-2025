@@ -8,10 +8,10 @@ namespace ggj_2025
         private const string GameScene = "SpyrosPlayground";
         
         [SerializeField] private GMChannel gmChannel;
+        [SerializeField] private AudioChannel audioChannel;
         
         private static GameManager _instance;
         public static GameManager Instance => _instance;
-        
         private void Awake()
         {
             if (_instance != null && _instance != this)
@@ -28,9 +28,14 @@ namespace ggj_2025
             {
                 throw new System.Exception("GM Channel not assigned");
             }
-            
+
             gmChannel.OnGameStart += StartGame;
             gmChannel.OnGameQuit += Quit;
+        }
+
+        private void Start()
+        {
+            audioChannel.PlayAudio("main_theme");
         }
         
         public void LoadTutorial()
@@ -49,12 +54,7 @@ namespace ggj_2025
         {
             Application.Quit();
         }
-        
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
-        }
+
 
         // Update is called once per frame
         void Update()
