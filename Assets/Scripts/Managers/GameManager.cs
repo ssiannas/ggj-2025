@@ -5,7 +5,7 @@ namespace ggj_2025
 {
     public class GameManager : MonoBehaviour
     {
-        private const string GameScene = "SpyrosPlayground";
+        private const string GameScene = "Level1";
         
         [SerializeField] private GMChannel gmChannel;
         [SerializeField] private AudioChannel audioChannel;
@@ -35,7 +35,7 @@ namespace ggj_2025
 
         private void Start()
         {
-            audioChannel.PlayAudio("main_theme");
+            audioChannel.PlayAudio("main_menu_theme");
         }
         
         public void LoadTutorial()
@@ -47,6 +47,8 @@ namespace ggj_2025
         {
             // start audio
             // load main scene
+            audioChannel.StopAudio("main_menu_theme");
+            audioChannel.PlayAudio("main_theme");
             SceneManager.LoadScene(GameScene);
         }
 

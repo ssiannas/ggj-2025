@@ -25,6 +25,7 @@ namespace ggj_2025
 				source.loop = s.loop;
 				s.source = source;	
 			}
+			DontDestroyOnLoad(gameObject);
         }
 
 		public void Play(string soundName)

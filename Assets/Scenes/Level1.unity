@@ -332,12 +332,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: PlayerIndex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: inputSystem
       value: 
-      objectReference: {fileID: 11400000, guid: c0a6c88b2ad5f8649a1337ff2cea4663, type: 2}
+      objectReference: {fileID: 11400000, guid: d2594f15c29de7245894f5b2d97cb1df, type: 2}
     - target: {fileID: 8655822651806511206, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: projectilePrefab
       value: 
@@ -1431,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: PlayerIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8655822651806511206, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: projectilePrefab

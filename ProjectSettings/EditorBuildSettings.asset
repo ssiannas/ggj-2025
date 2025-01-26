@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SpyrosPlayground.unity
     guid: 7724af0af7fc6d84ab4db0f7e0cdc87a
   - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: c5ed791e97fe7d848a3320eb962b16ed
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: dc0a5c8b086920a4a8a4826b515cb7d1
   m_configObjects:
