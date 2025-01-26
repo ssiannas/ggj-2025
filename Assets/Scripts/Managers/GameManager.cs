@@ -5,7 +5,7 @@ namespace ggj_2025
 {
     public class GameManager : MonoBehaviour
     {
-        private const string GameScene = "Level1";
+        private const string GameScene = "Level2";
         
         [SerializeField] private GMChannel gmChannel;
         [SerializeField] private AudioChannel audioChannel;

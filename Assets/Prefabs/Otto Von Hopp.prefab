@@ -148,11 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd31d3b407c21a40a009814267ba509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerIndex: 0
+  PlayerIndex: 1
   SelfDamageBigEmoEnobyVampireHarryIhearthMCR: 0
   uiChannel: {fileID: 11400000, guid: 7864b12f6d19c3647816d13047432f07, type: 2}
   audioChannel: {fileID: 11400000, guid: 5a70ce727aa527a4c8183940ef1165b5, type: 2}
-  inputSystem: {fileID: 11400000, guid: c0a6c88b2ad5f8649a1337ff2cea4663, type: 2}
+  inputSystem: {fileID: 11400000, guid: d2594f15c29de7245894f5b2d97cb1df, type: 2}
 --- !u!50 &1407656179883133516
 Rigidbody2D:
   serializedVersion: 5
@@ -214,8 +214,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.1, y: -1.26}
-  m_Size: {x: 2.09, y: 2.86}
+  m_Offset: {x: 0.46, y: -1.39}
+  m_Size: {x: 1.62, y: 3.22}
   m_Direction: 0
 --- !u!95 &2338029821841171668
 Animator:

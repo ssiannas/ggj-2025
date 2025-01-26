@@ -137,14 +137,13 @@ namespace ggj_2025
             OnHealthChanged();
             if (CurrentHealth <= 0)
             {
-                //Die();
+                inputSystem.StopRumble();
                 audioChannel.PlayAudio("win_sfx");
                 if (PlayerIndex == 1) {
                     SceneManager.LoadScene("WinnerP1");
                 } else {
                     SceneManager.LoadScene("WinnerP2");
                 }
-                Destroy(gameObject);
             }
         }
         private IEnumerator StopRumbleAfter(float seconds)
