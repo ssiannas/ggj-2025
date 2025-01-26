@@ -272,7 +272,7 @@ MonoBehaviour:
   player1: {fileID: 826975687}
   player2: {fileID: 2146339963}
   cameraChannel: {fileID: 11400000, guid: 996aac9131a722647b3be5f65a9ca3e5, type: 2}
-  zoomSpeed: 5
+  _shakeMagnitude: 0
 --- !u!4 &29749988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6444046522353063494, guid: eb0780f6d7e878341a0a1931819345f1, type: 3}
@@ -337,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: inputSystem
       value: 
-      objectReference: {fileID: 11400000, guid: d2594f15c29de7245894f5b2d97cb1df, type: 2}
+      objectReference: {fileID: 11400000, guid: c0a6c88b2ad5f8649a1337ff2cea4663, type: 2}
     - target: {fileID: 8655822651806511206, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: projectilePrefab
       value: 
@@ -787,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3007899741273491731, guid: 40b55009aae91bb4199e1b4cd39f7cc8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3506851958418821927, guid: 40b55009aae91bb4199e1b4cd39f7cc8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.20283143
@@ -826,6 +830,10 @@ PrefabInstance:
     - target: {fileID: 3506851958418821927, guid: 40b55009aae91bb4199e1b4cd39f7cc8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991349846811326154, guid: 40b55009aae91bb4199e1b4cd39f7cc8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5692968332135261156, guid: 40b55009aae91bb4199e1b4cd39f7cc8, type: 3}
       propertyPath: m_AnchorMax.x
