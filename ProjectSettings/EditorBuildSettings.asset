@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: c5ed791e97fe7d848a3320eb962b16ed
   - enabled: 1
+    path: Assets/Scenes/WinnerP2.unity
+    guid: dc831064018ff86419c395f87a70c5fa
+  - enabled: 1
+    path: Assets/Scenes/WinnerP1.unity
+    guid: 199d77f506f1af64fae3f026bfd2eee4
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: dc0a5c8b086920a4a8a4826b515cb7d1
   m_configObjects:

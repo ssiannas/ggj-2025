@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 namespace ggj_2025
 {
@@ -138,6 +139,11 @@ namespace ggj_2025
             {
                 //Die();
                 audioChannel.PlayAudio("win_sfx");
+                if (PlayerIndex == 1) {
+                    SceneManager.LoadScene("WinnerP1");
+                } else {
+                    SceneManager.LoadScene("WinnerP2");
+                }
                 Destroy(gameObject);
             }
         }
