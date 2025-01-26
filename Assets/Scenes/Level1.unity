@@ -286,9 +286,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2604387574931800689, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 035a524d1b9778740b98e641f9244ebe, type: 2}
     - target: {fileID: 6083067157129516842, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: m_Name
-      value: Sir Berginald
+      value: Otto Von Hopp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083067157129516842, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
+      propertyPath: m_TagString
+      value: P2
       objectReference: {fileID: 0}
     - target: {fileID: 6631961524732560460, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -338,6 +346,10 @@ PrefabInstance:
       propertyPath: inputSystem
       value: 
       objectReference: {fileID: 11400000, guid: c0a6c88b2ad5f8649a1337ff2cea4663, type: 2}
+    - target: {fileID: 8246344969354628076, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2339629300401835384, guid: d1da481bd01ad4e4c8f3a8460304ad53, type: 3}
     - target: {fileID: 8655822651806511206, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: projectilePrefab
       value: 

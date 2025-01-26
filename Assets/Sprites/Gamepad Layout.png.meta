@@ -1897,7 +1897,78 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gamepad Layout_0: 2596179114419964760
+      Gamepad Layout_1: 7592719825525405703
+      Gamepad Layout_10: -850264961732816030
+      Gamepad Layout_11: 7530437054562800974
+      Gamepad Layout_12: -1517858950297599972
+      Gamepad Layout_13: 5991970264129429856
+      Gamepad Layout_14: -5428000453512203124
+      Gamepad Layout_15: -777530129857732819
+      Gamepad Layout_16: -8669045529459460849
+      Gamepad Layout_17: -4368613996516912029
+      Gamepad Layout_18: 1711442995992297810
+      Gamepad Layout_19: -3729167058967530560
+      Gamepad Layout_2: 6390339938457651799
+      Gamepad Layout_20: -6542920995231876687
+      Gamepad Layout_21: 3732814385648457487
+      Gamepad Layout_22: 2233787529230249774
+      Gamepad Layout_23: 6371771814384723941
+      Gamepad Layout_24: -7439451641418084581
+      Gamepad Layout_25: 8731815355763820248
+      Gamepad Layout_26: -829531352925923133
+      Gamepad Layout_27: 1254469797689440413
+      Gamepad Layout_28: 4238795591899282660
+      Gamepad Layout_29: -6418720202108064331
+      Gamepad Layout_3: 5938085889172340421
+      Gamepad Layout_30: -8754860930434090253
+      Gamepad Layout_31: -6115994332515155747
+      Gamepad Layout_32: -2513343748528206428
+      Gamepad Layout_33: 6046636027979324915
+      Gamepad Layout_34: -359919303764069931
+      Gamepad Layout_35: 1908047806210633674
+      Gamepad Layout_36: -3585179883639408991
+      Gamepad Layout_37: -7190876082105570900
+      Gamepad Layout_38: -4328866962618082382
+      Gamepad Layout_39: 4678374471085785295
+      Gamepad Layout_4: 4693542851731523001
+      Gamepad Layout_40: 9040471176007157528
+      Gamepad Layout_41: 3047075414098040135
+      Gamepad Layout_42: 1501276583356670366
+      Gamepad Layout_43: -2010448236466616932
+      Gamepad Layout_44: 4003959051388605443
+      Gamepad Layout_45: 3604050343941931997
+      Gamepad Layout_46: 1320286624900782693
+      Gamepad Layout_47: -9220699622032934091
+      Gamepad Layout_48: 8094680248046067367
+      Gamepad Layout_49: 5066525347296289847
+      Gamepad Layout_5: 3723996210088743419
+      Gamepad Layout_50: 456910427128665718
+      Gamepad Layout_51: 7271703110707991914
+      Gamepad Layout_52: 946378212156200212
+      Gamepad Layout_53: -6240809652610876016
+      Gamepad Layout_54: 4069307087873448379
+      Gamepad Layout_55: 5308094183905784801
+      Gamepad Layout_56: -3428110285857669707
+      Gamepad Layout_57: 3358768291873313822
+      Gamepad Layout_58: 5837283041494619354
+      Gamepad Layout_59: 7459037363940715523
+      Gamepad Layout_6: -1829656387907883630
+      Gamepad Layout_60: 3335374019159854665
+      Gamepad Layout_61: -5991095085696456125
+      Gamepad Layout_62: 369030920418383151
+      Gamepad Layout_63: -4069266851465676840
+      Gamepad Layout_64: 2195206390888919489
+      Gamepad Layout_65: 1736609864819795664
+      Gamepad Layout_66: -8087438591510403464
+      Gamepad Layout_67: 3978856397077373845
+      Gamepad Layout_68: -1818522846638361153
+      Gamepad Layout_69: -3498425714829227812
+      Gamepad Layout_7: -427310797737044180
+      Gamepad Layout_70: -9131790350456610223
+      Gamepad Layout_8: -503302217128555148
+      Gamepad Layout_9: 2665706242633764194
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
