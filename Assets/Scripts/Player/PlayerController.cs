@@ -5,7 +5,9 @@ using UnityEngine.UIElements;
 
 namespace ggj_2025
 {
-    [RequireComponent(typeof(PlayerMovementController), typeof(PlayerCrosshairController), typeof(PlayerShootingController))]
+    [RequireComponent(typeof(PlayerMovementController), typeof(PlayerCrosshairController),
+        typeof(PlayerShootingController))]
+    [RequireComponent(typeof(PlayerAnimationController))]
     public class PlayerController : MonoBehaviour
     {
         // Properties ==============================================
@@ -16,7 +18,7 @@ namespace ggj_2025
         public float SelfDamageBigEmoEnobyVampireHarryIhearthMCR = 0.1f;
 
         private float _powerCooldownSec = 5f;
-        
+
         private readonly Vector2[] _directions =
         {
             Vector2.up,
@@ -28,7 +30,22 @@ namespace ggj_2025
             new Vector2(1, -1).normalized,
             new Vector2(-1, -1).normalized,
         };
-        
+
+        // State management ========================================
+        private PlayerState _state = PlayerState.IDLE;
+
+        public PlayerState State
+        {
+            get => _state;
+            private set
+            {
+                if (_state == value) return;
+                StopOldState(_state);
+                StartNewState(value);
+                _state = value;
+            }
+        }
+
         // Channels =================================================
         [SerializeField] private UIChannel uiChannel;
         
@@ -40,6 +57,7 @@ namespace ggj_2025
         private PlayerMovementController _movementController;
         private PlayerCrosshairController _crosshairController;
         private PlayerShootingController _shootingController;
+        private PlayerAnimationController _animationController;
         private SpriteRenderer _spriteRenderer;
         [SerializeField] private InputSystem inputSystem;
         private float _powerCooldownTs;
@@ -59,6 +77,7 @@ namespace ggj_2025
             _movementController = GetComponent<PlayerMovementController>();
             _crosshairController = GetComponent<PlayerCrosshairController>();
             _shootingController = GetComponent<PlayerShootingController>();
+            _animationController = GetComponent<PlayerAnimationController>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
@@ -72,6 +91,8 @@ namespace ggj_2025
         void Update()
         {
             var aim = _crosshairController.UpdateCrosshair(inputSystem);
+            State = GetPlayerState(aim);
+            
             if (inputSystem.GetFire())
             {
                 _shootingController.TryShoot(aim);
@@ -157,6 +178,72 @@ namespace ggj_2025
             if (Time.time < _powerCooldownTs) return;
             _powerCooldownTs = Time.time + _powerCooldownSec;
             _shootingController.ShootMultiple(_directions); 
+        }
+
+        private void StopOldState(PlayerState state)
+        {
+            switch(state) 
+            {
+                case PlayerState.WALK_UP:
+                    _animationController.StopWalkUp();
+                    break;
+                case PlayerState.WALK_DOWN:
+                    _animationController.StopWalkDown();
+                    break;
+                case PlayerState.WALK_LEFT:
+                    _animationController.StopWalkLeft();
+                    break;
+                case PlayerState.WALK_RIGHT:
+                    _animationController.StopWalkRight();
+                    break;
+                case PlayerState.IDLE:
+                    _animationController.StopIdle();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
+            }
+        }
+
+        private void StartNewState(PlayerState newState)
+        {
+           switch (newState) 
+           {
+               case PlayerState.WALK_UP:
+                   _animationController.StartWalkUp();
+                   break;
+               case PlayerState.WALK_DOWN:
+                     _animationController.StartWalkDown();
+                   break;
+               case PlayerState.WALK_LEFT:
+                     _animationController.StartWalkLeft();
+                   break;
+               case PlayerState.WALK_RIGHT:
+                        _animationController.StartWalkRight();
+                   break;
+               case PlayerState.IDLE:
+                   break;
+               default:
+                   throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
+           }
+        }
+        private PlayerState GetPlayerState(Vector2 aim)
+        {
+            var startVec = new Vector2(-1,1).normalized;
+            var angle = -Vector2.SignedAngle(startVec, aim);
+            Debug.Log(angle);
+            if (!inputSystem.GetFire() && inputSystem.GetMovement() == Vector2.zero)
+            {
+                return PlayerState.IDLE;
+            }
+
+            return angle switch
+            {
+                > 0 and <= 90 => PlayerState.WALK_UP,
+                > 90 and <= 180 => PlayerState.WALK_RIGHT,
+                > -90 and <= 0 => PlayerState.WALK_LEFT,
+                > -180 and <= -90 => PlayerState.WALK_DOWN,
+                _ => PlayerState.IDLE
+            };
         }
     }
 }

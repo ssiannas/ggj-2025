@@ -15,7 +15,6 @@ namespace ggj_2025
         
         [SerializeField] private CameraChannel cameraChannel;
         [SerializeField]
-        float zoomSpeed = 5.0f;
 
         private float _shakeMagnitude;
         private float _shakeDuration;
@@ -61,7 +60,6 @@ namespace ggj_2025
             }
         }
 
-        
 
         private void Shake()
         {
