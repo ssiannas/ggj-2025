@@ -137,7 +137,7 @@ namespace ggj_2025
             OnHealthChanged();
             if (CurrentHealth <= 0)
             {
-                inputSystem.StopRumble();
+                StartCoroutine(StopRumbleAfter(0.1f));
                 audioChannel.PlayAudio("win_sfx");
                 if (PlayerIndex == 1) {
                     SceneManager.LoadScene("WinnerP1");
