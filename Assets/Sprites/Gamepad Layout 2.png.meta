@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: c7545c829b5458b49b8196e8f149beff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 951229388465559281
+    second: Gamepad Layout 2_0
+  - first:
+      213: -2124742748376321388
+    second: Gamepad Layout 2_1
+  - first:
+      213: 1539269726058122959
+    second: Gamepad Layout 2_2
+  - first:
+      213: 3135228685607454334
+    second: Gamepad Layout 2_3
+  - first:
+      213: 8974172102591442284
+    second: Gamepad Layout 2_4
+  - first:
+      213: -2582486392615690995
+    second: Gamepad Layout 2_5
+  - first:
+      213: 2563945191855515722
+    second: Gamepad Layout 2_6
+  - first:
+      213: -3569284812939874185
+    second: Gamepad Layout 2_7
+  - first:
+      213: -6934689771159796929
+    second: Gamepad Layout 2_8
+  - first:
+      213: -3740581737169883024
+    second: Gamepad Layout 2_9
+  - first:
+      213: 7433824753904619716
+    second: Gamepad Layout 2_10
+  - first:
+      213: -6536192328418186499
+    second: Gamepad Layout 2_11
+  - first:
+      213: -4569718178272311315
+    second: Gamepad Layout 2_12
+  - first:
+      213: -4095010650606266382
+    second: Gamepad Layout 2_13
+  - first:
+      213: 715719061549135154
+    second: Gamepad Layout 2_14
+  - first:
+      213: -1825715689539756433
+    second: Gamepad Layout 2_15
+  - first:
+      213: 7677148284524677311
+    second: Gamepad Layout 2_16
+  - first:
+      213: -5249083413058096271
+    second: Gamepad Layout 2_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gamepad Layout 2_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 483
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6d667c612733d00800000000000000
+      internalID: 951229388465559281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 478
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49231fb4ab56382e0800000000000000
+      internalID: -2124742748376321388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_2
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce053319a59c5510800000000000000
+      internalID: 1539269726058122959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 483
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e764f3fd0e1928b20800000000000000
+      internalID: 3135228685607454334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 68
+        width: 784
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6dee28eaf9aa8c70800000000000000
+      internalID: 8974172102591442284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_5
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 477
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d9cdafe4a292cd0800000000000000
+      internalID: -2582486392615690995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_6
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 477
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a486e105196f49320800000000000000
+      internalID: 2563945191855515722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 477
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770b58e9f5a577ec0800000000000000
+      internalID: -3569284812939874185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_8
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 477
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f334c7a056803cf90800000000000000
+      internalID: -6934689771159796929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_9
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 477
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070fcae7ab8c61cc0800000000000000
+      internalID: -3740581737169883024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_10
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 477
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c09df24a304a2760800000000000000
+      internalID: 7433824753904619716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_11
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 476
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa200125b7ca45a0800000000000000
+      internalID: -6536192328418186499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 379
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de70f6c37891590c0800000000000000
+      internalID: -4569718178272311315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_13
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 380
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f71c2372899b27c0800000000000000
+      internalID: -4095010650606266382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_14
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 380
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235bc96c1bebee900800000000000000
+      internalID: 715719061549135154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_15
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 380
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e1020e041c9a6e0800000000000000
+      internalID: -1825715689539756433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_16
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 82
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8c71380b5ba8a60800000000000000
+      internalID: 7677148284524677311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad Layout 2_17
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 81
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173f64852728727b0800000000000000
+      internalID: -5249083413058096271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 49d30ef77afe6c1489cda10ca4bb6f46
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Gamepad Layout 2_0: 951229388465559281
+      Gamepad Layout 2_1: -2124742748376321388
+      Gamepad Layout 2_10: 7433824753904619716
+      Gamepad Layout 2_11: -6536192328418186499
+      Gamepad Layout 2_12: -4569718178272311315
+      Gamepad Layout 2_13: -4095010650606266382
+      Gamepad Layout 2_14: 715719061549135154
+      Gamepad Layout 2_15: -1825715689539756433
+      Gamepad Layout 2_16: 7677148284524677311
+      Gamepad Layout 2_17: -5249083413058096271
+      Gamepad Layout 2_2: 1539269726058122959
+      Gamepad Layout 2_3: 3135228685607454334
+      Gamepad Layout 2_4: 8974172102591442284
+      Gamepad Layout 2_5: -2582486392615690995
+      Gamepad Layout 2_6: 2563945191855515722
+      Gamepad Layout 2_7: -3569284812939874185
+      Gamepad Layout 2_8: -6934689771159796929
+      Gamepad Layout 2_9: -3740581737169883024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
