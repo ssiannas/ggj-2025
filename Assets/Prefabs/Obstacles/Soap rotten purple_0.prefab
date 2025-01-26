@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4634746226394075919}
   - component: {fileID: 6873023988844053375}
   - component: {fileID: 6212242354373903669}
+  - component: {fileID: 4145870798410116904}
   m_Layer: 0
   m_Name: Soap rotten purple_0
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7720463824556193298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5643728, y: -2.7681932, z: 0}
+  m_LocalPosition: {x: -1.5643728, y: -2.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,3 +101,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dedd724b0a7f87449e5270cfcaab1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!68 &4145870798410116904
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7720463824556193298}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.3420365, y: -0.1710732}
+  - {x: -0.9478562, y: -1.3294477}
+  - {x: 2.4400916, y: 0.428854}
+  - {x: 1.7646409, y: 1.1877676}
+  - {x: 1.1089215, y: 1.410761}
+  - {x: 0.12422204, y: 1.3837373}
+  - {x: -2.103197, y: 0.3808961}
+  - {x: -2.3518713, y: -0.16138172}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
