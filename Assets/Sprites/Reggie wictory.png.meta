@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Reggie wictory_0: -3090851765271118416
+      Reggie wictory_1: -4143580921159820723
+      Reggie wictory_2: 331365983348386275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
