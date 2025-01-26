@@ -48,7 +48,7 @@ MonoBehaviour:
   - source: {fileID: 0}
     clip: {fileID: 8300000, guid: 1c3fcc97adef1494e997748ee3ea478a, type: 3}
     soundName: main_theme
-    volume: 0.8
+    volume: 1
     pitch: 1
     loop: 1
   - source: {fileID: 0}
@@ -60,13 +60,13 @@ MonoBehaviour:
   - source: {fileID: 0}
     clip: {fileID: 8300000, guid: b0a8102c2c57c154aa4e672e0017816c, type: 3}
     soundName: bubble_pop
-    volume: 0.65
+    volume: 0.504
     pitch: 1
     loop: 0
   - source: {fileID: 0}
     clip: {fileID: 8300000, guid: f903ca85800c53647a8c253b6ccfffdf, type: 3}
     soundName: special
-    volume: 0.7
+    volume: 0.706
     pitch: 1
     loop: 0
   - source: {fileID: 0}
