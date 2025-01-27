@@ -35,13 +35,13 @@ namespace ggj_2025
 
         public override bool GetSpecial()
         {
-            return Gamepad.all[PlayerIndex][GamepadButton.LeftTrigger].isPressed;
+            return Gamepad.all[PlayerIndex].leftTrigger.isPressed;
         }
 
         public override bool GetFire()
         {
             // Use right button (circle or B) to fire
-            return Gamepad.all[PlayerIndex][GamepadButton.RightTrigger].isPressed;
+            return Gamepad.all[PlayerIndex].rightTrigger.isPressed;
         }
 
         public override void StartRumble(float durationSec = 0.5f)

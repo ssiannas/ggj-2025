@@ -1223,6 +1223,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Otto Von Hopp
       objectReference: {fileID: 0}
+    - target: {fileID: 3401583931980068201, guid: 5f86de9f43e19664cb1b257a80d28cbc, type: 3}
+      propertyPath: indicator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401583931980068201, guid: 5f86de9f43e19664cb1b257a80d28cbc, type: 3}
+      propertyPath: indicators
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8274469728661592342, guid: 5f86de9f43e19664cb1b257a80d28cbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.9567
@@ -2127,6 +2135,14 @@ PrefabInstance:
     - target: {fileID: 6631961524732560460, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
+      propertyPath: indicator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
+      propertyPath: indicators
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7178423913619360302, guid: d7a8a564b1c0ff44d8836b1206fb59f6, type: 3}
       propertyPath: PlayerIndex

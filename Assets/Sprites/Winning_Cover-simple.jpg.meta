@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Winning_Cover-simple_0: 8874698368890958834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
