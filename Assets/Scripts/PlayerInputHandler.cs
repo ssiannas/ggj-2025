@@ -41,10 +41,12 @@ namespace ggj_2025
 
         public void OnFire(CallbackContext ctx)
         {
-            if (ctx.performed)
+            if (ctx.canceled)
             {
-                _playerController.TryShoot();
+                _playerController.StopShoot();
             }
+            if (ctx.performed)
+                _playerController.StartShoot();
         }
         
         public void OnPower(CallbackContext ctx)

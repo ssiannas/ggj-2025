@@ -1,4 +1,5 @@
 using System;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace ggj_2025
@@ -11,6 +12,7 @@ namespace ggj_2025
         private float _cooldownTimestamp;
         private float _fireCooldown;
         private float _offset= 1.2f;
+        public bool IsShooting { get; set; }
         [SerializeField] private AudioChannel audioChannel;
 
         private string[] shootingSounds =
@@ -40,13 +42,27 @@ namespace ggj_2025
         
         public void TryShoot(Vector2 direction)
         {
-            if (Time.time < _cooldownTimestamp) return;
+            if (Time.time < _cooldownTimestamp)
+            {
+                return;
+            };
+            IsShooting = true;
             _cooldownTimestamp = Time.time + _fireCooldown;
             // Shoot!
             // Get random shooting sound 
             var soundName = shootingSounds[UnityEngine.Random.Range(0, shootingSounds.Length)];
             audioChannel.PlayAudio(soundName);
             Shoot(direction);
+        }
+        
+        public void StopShoot()
+        {
+            IsShooting = false;
+        }
+
+        public void StartShoot()
+        {
+            IsShooting = true;
         }
 
         public void ShootMultiple(Vector2[] directions)

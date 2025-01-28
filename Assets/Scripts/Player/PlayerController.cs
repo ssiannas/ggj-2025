@@ -103,6 +103,10 @@ namespace ggj_2025
         { 
             _movementController.Move();
             _crosshairController.UpdateCrosshair(_aim);
+            if (_shootingController.IsShooting)
+            {
+               TryShoot();
+            }
             State = GetPlayerState(_aim);
             _spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100) * -1;
         }
@@ -115,6 +119,16 @@ namespace ggj_2025
         public void TryShoot()
         {
             _shootingController.TryShoot(_aim);
+        }
+
+        public void StartShoot()
+        {
+            _shootingController.StartShoot();
+        }
+        
+        public void StopShoot()
+        {
+            _shootingController.StopShoot();
         }
         
         public void TakeDamage(float damage)
@@ -134,8 +148,8 @@ namespace ggj_2025
                 CurrentHealth -= damage;
             }
             
-            Gamepad.current.SetMotorSpeeds(0.5f, 0.5f);
-            StartCoroutine(StopRumbleAfter(0.2f));
+            //Gamepad.current.SetMotorSpeeds(0.5f, 0.5f);
+            //StartCoroutine(StopRumbleAfter(0.2f));
 
             OnHealthChanged();
             if (CurrentHealth <= 0)
@@ -243,7 +257,7 @@ namespace ggj_2025
         {
             var startVec = new Vector2(-1,1).normalized;
             var angle = -Vector2.SignedAngle(startVec, aim);
-            if (_movementController.Direction == Vector2.zero)
+            if (!_shootingController.IsShooting && _movementController.Direction == Vector2.zero)
             {
                 return PlayerState.IDLE;
             }
