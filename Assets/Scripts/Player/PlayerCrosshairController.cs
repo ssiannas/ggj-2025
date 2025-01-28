@@ -27,11 +27,13 @@ namespace ggj_2025
          * @param inputSystem The input system to get the aim input from.
          * @return The aim input.
          */
-        public Vector2 UpdateCrosshair(InputSystem inputSystem)
+        public void UpdateCrosshair(Vector2 aim)
         {
-            var aim = inputSystem.GetAim(transform, _mainCamera);
+            if (aim == Vector2.zero)
+            {
+                return;
+            }
             crosshair.transform.position = transform.position + new Vector3(aim.x, aim.y, 0) * crosshairDistance;
-            return aim;
         }
     }
 }

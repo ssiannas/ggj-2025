@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc98a8a094bd11442ad0b5a9cd58ce8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
 --- !u!114 &7938253617993123993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +152,6 @@ MonoBehaviour:
   SelfDamageBigEmoEnobyVampireHarryIhearthMCR: 0
   uiChannel: {fileID: 11400000, guid: 7864b12f6d19c3647816d13047432f07, type: 2}
   audioChannel: {fileID: 11400000, guid: 5a70ce727aa527a4c8183940ef1165b5, type: 2}
-  inputSystem: {fileID: 11400000, guid: 248d6f558b114d74696513ffecdee69b, type: 2}
 --- !u!50 &4589102768049890548
 Rigidbody2D:
   serializedVersion: 5

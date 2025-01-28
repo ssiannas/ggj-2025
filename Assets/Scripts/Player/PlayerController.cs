@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using static UnityEngine.InputSystem.InputAction;
 
 namespace ggj_2025
 {
@@ -17,6 +18,18 @@ namespace ggj_2025
         private float _shield = 0;
         public int PlayerIndex = 0;
         public float SelfDamageBigEmoEnobyVampireHarryIhearthMCR = 0.1f;
+        
+        private Vector2 _aim = Vector2.up;
+
+        public Vector2 Aim
+        {
+            get => _aim;
+            set 
+            {
+                if (value != Vector2.zero) _aim = value;
+                _crosshairController.UpdateCrosshair(_aim);
+            }
+        }
 
         private float _powerCooldownSec = 5f;
 
@@ -61,15 +74,12 @@ namespace ggj_2025
         private PlayerShootingController _shootingController;
         private PlayerAnimationController _animationController;
         private SpriteRenderer _spriteRenderer;
-        [SerializeField] private InputSystem inputSystem;
         private float _powerCooldownTs;
 
         private void Awake()
         {
-            if (inputSystem is null)
-            {
-                throw new Exception("Input system not assigned");
-            }
+           
+
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -85,26 +95,15 @@ namespace ggj_2025
 
         private void FixedUpdate()
         {
-            _movementController.Move(inputSystem);
             //TakeDamage(SelfDamageBigEmoEnobyVampireHarryIhearthMCR);
         }
 
         //Use Update for non-physics based functions
         void Update()
-        {
-            var aim = _crosshairController.UpdateCrosshair(inputSystem);
-            State = GetPlayerState(aim);
-            
-            if (inputSystem.GetFire())
-            {
-                _shootingController.TryShoot(aim);
-            }
-            
-            if (inputSystem.GetSpecial())
-            {
-                TryUsePower();
-            }
-            
+        { 
+            _movementController.Move();
+            _crosshairController.UpdateCrosshair(_aim);
+            State = GetPlayerState(_aim);
             _spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100) * -1;
         }
 
@@ -113,6 +112,10 @@ namespace ggj_2025
            OnToggleShield?.Invoke(_shield > 0);
         }
         
+        public void TryShoot()
+        {
+            _shootingController.TryShoot(_aim);
+        }
         
         public void TakeDamage(float damage)
         {
@@ -131,7 +134,7 @@ namespace ggj_2025
                 CurrentHealth -= damage;
             }
             
-            inputSystem.StartRumble();
+            Gamepad.current.SetMotorSpeeds(0.5f, 0.5f);
             StartCoroutine(StopRumbleAfter(0.2f));
 
             OnHealthChanged();
@@ -149,7 +152,7 @@ namespace ggj_2025
         private IEnumerator StopRumbleAfter(float seconds)
         {
             yield return new WaitForSeconds(seconds);
-            inputSystem.StopRumble();
+            Gamepad.current.SetMotorSpeeds(0, 0);
         }
         
         public void Heal(float healAmount)
@@ -180,7 +183,7 @@ namespace ggj_2025
             uiChannel.HealthChanged(CurrentHealth, MaxHealth, PlayerIndex);
         }
 
-        private void TryUsePower()
+        public void TryUsePower()
         {
             if (Time.time < _powerCooldownTs) return;
             _powerCooldownTs = Time.time + _powerCooldownSec;
@@ -240,7 +243,7 @@ namespace ggj_2025
         {
             var startVec = new Vector2(-1,1).normalized;
             var angle = -Vector2.SignedAngle(startVec, aim);
-            if (!inputSystem.GetFire() && inputSystem.GetMovement() == Vector2.zero)
+            if (_movementController.Direction == Vector2.zero)
             {
                 return PlayerState.IDLE;
             }
@@ -253,6 +256,12 @@ namespace ggj_2025
                 > -180 and <= -90 => PlayerState.WALK_DOWN,
                 _ => PlayerState.IDLE
             };
+        }
+        
+        
+        // ----- INPUT SYSTEM CALLBACKS -----
+        public void OnMove(CallbackContext context)
+        {
         }
     }
 }
