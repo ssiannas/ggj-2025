@@ -46,7 +46,6 @@ namespace ggj_2025
             {
                 return;
             };
-            IsShooting = true;
             _cooldownTimestamp = Time.time + _fireCooldown;
             // Shoot!
             // Get random shooting sound 
