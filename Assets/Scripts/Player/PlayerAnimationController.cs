@@ -8,11 +8,11 @@ namespace ggj_2025
         
         public void Awake()
         {
+            animator = GetComponent<Animator>();
             if (animator is null)
             {
                 throw new System.Exception("Animator not assigned");
             }
-            animator = GetComponent<Animator>();
         }
         
         public void StartWalkUp()
