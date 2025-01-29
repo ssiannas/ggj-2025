@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6444046522353063494}
   - component: {fileID: 4244109353542258921}
-  - component: {fileID: -3071935261391958936}
   - component: {fileID: 4202304595743008364}
   m_Layer: 0
   m_Name: Rubber duck _0
@@ -89,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3071935261391958936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4737332825690714197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dedd724b0a7f87449e5270cfcaab1e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &4202304595743008364
 PolygonCollider2D:
   m_ObjectHideFlags: 0

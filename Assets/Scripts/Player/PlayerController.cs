@@ -108,7 +108,6 @@ namespace ggj_2025
                TryShoot();
             }
             State = GetPlayerState(_aim);
-            _spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100) * -1;
         }
 
         private void CheckShield()

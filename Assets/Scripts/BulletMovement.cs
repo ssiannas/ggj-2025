@@ -38,7 +38,6 @@ namespace ggj_2025
         {
             // Move the object in the specified direction
             var factor = Time.deltaTime * speed;
-            _spriteRenderer.sortingOrder =  Mathf.RoundToInt(transform.position.y * 100) * -1;
             //TO DO: RIGID BOODY  
         }
 

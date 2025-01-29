@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 41564376335839591}
   - component: {fileID: 4980779530272106294}
-  - component: {fileID: 1633535409242287962}
   m_Layer: 0
   m_Name: Submarine rotten_0
   m_TagString: Untagged
@@ -88,15 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1633535409242287962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8379497365818623094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dedd724b0a7f87449e5270cfcaab1e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
